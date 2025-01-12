@@ -13,6 +13,4 @@ By using Python to process the International Phonetic Alphabet (IPA) transcripti
 
 <li>Additional details (in table view) like stressed/unstressed vowel patterns, syllable counts, and word frequency (web occurrence).</li>
 
-
-
-A working link can be found here: https://ssbe-rhyming-dictionary.streamlit.app
+<p>A working link can be found here: https://ssbe-rhyming-dictionary.streamlit.app</p>
