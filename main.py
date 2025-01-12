@@ -1,12 +1,11 @@
+### MODULES ###
 import copy as copy #Deep copy tables
 import pandas as pd #Dataframe to be used with Streamlit
 import streamlit as st #Data visualizer
 import time as time #Used for the "stopwatch" or "timer", optional
 import json as json #Used to write to or read from the sorted data file
 
-### Instructions for other usersm
-#Press the run button in your VSC terminal (top right-hand corner)
-#Follow the Terminal's instructions to open Streamlit
+### Link: https://ssbe-rhyming-dictionary.streamlit.app/
 
 
 ### VARIABLES
@@ -14,6 +13,7 @@ import json as json #Used to write to or read from the sorted data file
 #streamlit run /Users/munzhong-school/rhyme/main.py
 #For my reference, paste it into the terminal to run the code
 
+### VARIABLES ###
 realDataSet = True #Whether to use RM-AZ or the shortened dataset
 disableOverflow = False #Whether to disable text overflow (Show All button)
 limit = 14 #Starts from the 0th index, limit+1 is the max number of results to display before pressing Show All.
@@ -30,9 +30,10 @@ nonBreakingSpace = "\u00A0" #A space that does not carry over to the new line!
 infoFileName = "infofile" #Information
 sortedDataName = "SortedData"
 
+### VOWELS ###
 vowels = ["ɪ","ɛ","a","ɔ","ɵ","ə","ʌ","ɪj","ɛj",'ɑj',"oj","aw","əw","ʉw","ɪː","ɛː","ɑː","oː","ɵː","əː","ó"]
 
-
+### WEB FREQUENCY ###
 webFreqTable = [
   0,
   10,
@@ -46,7 +47,7 @@ webFreqTable = [
   1000000000
 ] #Last element has a web frequency unit of 10 (Or is it 9? I forgot)
 
-### CODE
+### CODE ##
 
 nl = []
 for i in copy.deepcopy(vowels):
