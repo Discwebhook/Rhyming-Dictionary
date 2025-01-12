@@ -12,5 +12,5 @@ By using Python to process the International Phonetic Alphabet (IPA) transcripti
 <li>Options (in table view) to sort words by any column in ascending or descending order, download the table as a .csv file or search for specific results within the table that is built into Streamlit.</li>
 
 <li>Additional details (in table view) like stressed/unstressed vowel patterns, syllable counts, and word frequency (web occurrence).</li>
-
+<p> </p>
 <p>A working link can be found here: https://ssbe-rhyming-dictionary.streamlit.app</p>
