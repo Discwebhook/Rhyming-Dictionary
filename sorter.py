@@ -1,3 +1,5 @@
+#This file was used to organize (sort alphabetically and remove duplicates) from SortedData.txt
+
 with open('NewRMAZ.txt', 'r') as file:
     lines = file.readlines()
 entries = []
