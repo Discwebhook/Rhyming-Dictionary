@@ -27,7 +27,6 @@ uncommonWordThreshold = 3 #Anything equal to or below this is considered an unco
 filename = realDataSet and 'RM-AZ' or 'NewRMAZ' #Text files
 stressedVowel = "ɛ́"[1] #The special vowel stress character
 nonBreakingSpace = "\u00A0" #A space that does not carry over to the new line!
-commonWordsFileName = "CommonWords" #Common words file to extract from
 infoFileName = "infofile" #Information
 sortedDataName = "SortedData"
 
@@ -121,31 +120,7 @@ def squeezeInPosition(value,position):
   dict[position] = value
 #Shifts all elements at position+1 up, then inserts a value into position. Same as pop.
 
-def sortCommonWords():
-  lis = []
-  with open(commonWordsFileName+'.txt', 'r') as file:
-    lis = file.readlines()
-  lis = sorted(lis)
-  nl = []
-  for i in range(len(lis)):
-    lis[i] = lis[i].rstrip().lower()
-  for i in range(len(dict)):
-    nl.append(dict[i][2].rstrip())
-  return [word for word in nl if word in lis]
-#Return the list of commonly used words that the rhyme dictionary has.
 
-def sortCommonWordsList():
-  lis = []
-  with open(commonWordsFileName+'.txt', 'r') as file:
-      lis = file.readlines()
-  r = ""
-  lis = sorted(lis)
-  for i in range(len(lis)):
-    r = r+(i==0 and "" or "")+lis[i].lower()
-  f = open(commonWordsFileName+".txt", "w")
-  f.write(r)
-  f.close()
-#Not used at the moment. Call this to sort the common words file list alphabetically.
 
 def stressedAndUnstress(ipa):
   parse = ipa.split(" ")
